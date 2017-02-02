@@ -1,0 +1,73 @@
+{% load staticfiles %}
+{% include 'material/includes/material_css.html' %}
+{% include 'material/includes/material_js.html' %}
+{% load material_form %} 
+
+<html>
+    <head>
+   
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+ <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+<link rel='stylesheet' type='text/css' href='{% static 'css/font-awesome.css' %}' />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+
+
+      <title>My Blog</title>
+    </head>
+    <body>
+   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+ 
+<nav>
+    <div class="nav-wrapper orange">
+      <a href="/" class="brand-logo">Blog</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li>
+        <li><a href="#">Page 4</a></li>
+       
+      </ul>
+
+      <ul class="side-nav white" id="mobile-demo">
+     <!--<div class="background">
+        <img src="images/office.jpg">
+      </div> -->
+        <li><a href="/">Home</a></li>
+        <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li>
+        <li><a href="#">Page 4</a></li>
+       
+      </ul>
+
+    </div>
+  </nav>
+
+
+
+ <div class="container"> 
+    <div class="row">
+
+
+   <!-- <div class="content container"> -->
+
+        
+            <div class="col s12">
+            {% block content %}
+            {% endblock %}
+            </div>
+      </div>
+    </div>
+  
+</div>
+</body>
+ <script type="text/javascript">
+ $('.button-collapse').sideNav();
+ </script>
+</html>
