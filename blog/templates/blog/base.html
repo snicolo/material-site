@@ -32,8 +32,11 @@
           <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/contact">Contact</a></li>
-          {% if not user.is_authenticated %}
+          {% if user.is_authenticated %}
+          <li></li>
+          {% else %}
         <li><a href="/admin">Login</a></li>
+          {% endif %}
        
       </ul>
 
@@ -44,7 +47,11 @@
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/contact">Contact</a></li>
-       
+          {% if user.is_authenticated %}
+          <li></li>
+          {% else %}
+          <li><a href="/admin">Login</a></li>
+          {% endif %}
        
       </ul>
 
