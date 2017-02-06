@@ -12,7 +12,7 @@
  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-<link rel='stylesheet' type='text/css' href='{% static 'css/font-awesome.css' %}' />
+<link rel='stylesheet' type='text/css' href='{% static 'css/font-awesome.css' %}'/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 
@@ -33,7 +33,7 @@
         <li><a href="/about">About</a></li>
         <li><a href="/contact">Contact</a></li>
           {% if user.is_authenticated %}
-          <li></li>
+          <li><a href="/admin">Administration</a></li>
           {% else %}
         <li><a href="/admin">Login</a></li>
           {% endif %}
@@ -48,7 +48,7 @@
         <li><a href="/about">About</a></li>
         <li><a href="/contact">Contact</a></li>
           {% if user.is_authenticated %}
-          <li></li>
+          <li><a href="/admin">Administration</a></li>
           {% else %}
           <li><a href="/admin">Login</a></li>
           {% endif %}
